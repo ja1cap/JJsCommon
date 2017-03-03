@@ -6,13 +6,15 @@
         {
             "name": "Josiah",
             "email": "josiah@jjs.id.au"
+        },
+        {
+            "name": "ja1cap",
+            "email": "ja1cap@weasty.com",
+            "homepage": "https://www.weasty.com"
         }
     ],
     "autoload": {
         "psr-0": {"JJs\\Common": "src"}
     },
-    "minimum-stability": "dev",
-    "require": {
-        "php": "~5.4"
-    }
+    "minimum-stability": "dev"
 }

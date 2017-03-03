@@ -13,7 +13,7 @@ use Exception;
 
 /**
  * Console output logger
- * 
+ *
  * PSR-3 Compatible Logger which logs output to a Symfony console output
  *
  * @author Josiah <josiah@jjs.id.au>
@@ -22,21 +22,21 @@ class OutputLogger extends AbstractLogger
 {
     /**
      * Output
-     * 
+     *
      * @var OutputInterface
      */
     protected $output;
 
     /**
      * Output formatting
-     * 
+     *
      * @var OutputFormatterInterface
      */
     protected $format;
 
     /**
      * Creates a new output logger
-     * 
+     *
      * @param OutputInterface          $output Output
      * @param OutputFormatterInterface $format Formatting colors (optional)
      */
@@ -48,7 +48,7 @@ class OutputLogger extends AbstractLogger
 
     /**
      * Returns the output where this logger will write information to
-     * 
+     *
      * @return OutputInterface
      */
     public function getOutput()
@@ -58,7 +58,7 @@ class OutputLogger extends AbstractLogger
 
     /**
      * Returns the format of the output
-     * 
+     *
      * @return OutputFormatterInterface
      */
     public function getFormat()
@@ -68,7 +68,7 @@ class OutputLogger extends AbstractLogger
 
     /**
      * Gets the default output formatter for the log
-     * 
+     *
      * @return return
      */
     public function getDefaultOutputFormatter()
@@ -110,7 +110,7 @@ class OutputLogger extends AbstractLogger
             case LogLevel::WARNING:
                 if ($output->getVerbosity() < OutputInterface::VERBOSITY_NORMAL) return;
         }
-        
+
         $outputFormat = $output->getFormatter();
         $output->setFormatter($this->getFormat());
         $output->setDecorated($outputFormat->isDecorated());

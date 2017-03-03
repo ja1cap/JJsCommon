@@ -16,7 +16,7 @@ class LineBuffer
      * Line callback
      *
      * Called with the contents of each line
-     * 
+     *
      * @var callable
      */
     protected $callback;
@@ -25,15 +25,15 @@ class LineBuffer
      * Buffer
      *
      * Holds text which has been input since the last new line.
-     * 
+     *
      * @var string
      */
     protected $buffer;
 
     /**
      * Creates a new line buffer and assigns the callback
-     * 
-     * @param callable $callback 
+     *
+     * @param callable $callback
      */
     public function __construct(callable $callback)
     {
@@ -45,11 +45,11 @@ class LineBuffer
      * Called for each line as its encountered
      *
      * Each line of text is passed to the callback as it is encountered.
-     * 
+     *
      * @param string $line          Line of text
-     * @param bool   $prependBuffer Indicates whether the buffer should be 
+     * @param bool   $prependBuffer Indicates whether the buffer should be
      *                              prepended to the line.
-     * 
+     *
      * @return void
      */
     protected function line($line, $prependBuffer = false)
@@ -64,7 +64,7 @@ class LineBuffer
 
     /**
      * Inputs new text into the line buffer
-     * 
+     *
      * @param string $text Text
      * @return void
      */
@@ -98,7 +98,7 @@ class LineBuffer
 
     /**
      * Flushes the remaining buffer as a line
-     * 
+     *
      * @return void
      */
     public function flush()
@@ -109,7 +109,7 @@ class LineBuffer
 
     /**
      * Calls the callback for each line in the text
-     * 
+     *
      * @param string   $text     Text
      * @param callable $callback Callback
      */
